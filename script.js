@@ -320,3 +320,30 @@ console.log('Precio mensual: $${precioConDescuento} MXN');
 console.log('Total por el curso: $${total} MXN');
 
 //==========================================================================//
+
+// 12. Realizar un programa que ayude a calcular el total a pagar de acuerdo a la
+//  distancia recorrida por un vehículo con cargo extra por los litros consumidos,
+//  tomando en consideración lo siguiente:
+// Si el vehículo es “coche”, el precio kilometro ha de ser 0.20, si es “moto” ha
+//  de ser 0.10 y si es “autobús” 0.5.
+// Si los litros consumidos están entre 0 y 100 se ha de añadir 5 al costo total,
+//  si es mayor la cantidad de litros consumidos se ha de añadir 10 al total.
+// Considere qué: total a pagar = (precio kilometro x kms recorridos) + extra por
+//  litros consumidos.
+
+//Respuesta:
+const tipo = prompt("Tipo de vehículo (coche, moto, autobus):").toLowerCase();
+const kms = parseFloat(prompt("Ingrese los kms recorridos:"));
+const litros = parseFloat(prompt("Ingrese los litros consumidos:"));
+
+let precioKm = 0;
+if (tipo === "coche") precioKm = 0.20;
+else if (tipo === "moto") precioKm = 0.10;
+else if (tipo === "autobus") precioKm = 0.50;
+
+let extra = (litros <= 100) ? 5 : 10;
+const totalPagar = (precioKm * kms) + extra;
+console.log("Vehículo: ", tipo, "- Kms recorridos: ", kms, " - Litros consumidos: ", litros);
+console.log(`Total a pagar: $${totalPagar.toFixed(2)}`);
+
+//==========================================================================//

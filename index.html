@@ -167,7 +167,7 @@
         // .
         // 50
 
-        // //Respuesta:
+        // // Respuesta:
         // const num1 = parseInt(prompt("Ingresa el primer número (1-50):"));
         // const num2 = parseInt(prompt("Ingresa el segundo número (1-50):"));
 
@@ -220,7 +220,7 @@
         // calificación es inferior a 6, “regular” si está entre 6 y 8, “bien” si
         // es 9, y por último, “excelente” si es 10.
 
-        // //Respuesta:
+        // // Respuesta:
         // const nota = parseInt(prompt("Ingrese una calificación (1-10):"));
         // console.log("Nota: " + nota)
         // if (nota < 1 || nota > 10) {
@@ -275,7 +275,7 @@
         // • El topping de brownie cuesta 20 MXN.
         // En caso de no disponer del topping solicitado por el usuario, el programa le indicará “no tenemos este topping, lo sentimos.” y a continuación le informará el precio del helado sin ningún topping.
 
-        // //Respuesta:
+        // // Respuesta:
         // const topping = prompt("Elige un topping (oreo, kitkat, brownie):").toLowerCase();
         // let precio = 50;
 
@@ -308,31 +308,57 @@
         // • Carrera 6 meses
         // • Master: 12 meses
 
-        //Respuesta:
-        const programa = prompt("Elige un programa (course, carrera, master):").toLowerCase();
-        const beca = prompt("¿Tienes alguna beca? (facebook, google, jesua o ninguna):").toLowerCase();
+        // // Respuesta:
+        // const programa = prompt("Elige un programa (course, carrera, master):").toLowerCase();
+        // const beca = prompt("¿Tienes alguna beca? (facebook, google, jesua o ninguna):").toLowerCase();
 
-        let precioMensual = 0;
-        let duracion = 0;
+        // let precioMensual = 0;
+        // let duracion = 0;
 
-        if (programa === "course") { precioMensual = 4999; duracion = 2; }
-        else if (programa === "carrera") { precioMensual = 3999; duracion = 6; }
-        else if (programa === "master") { precioMensual = 2999; duracion = 12; }
+        // if (programa === "course") { precioMensual = 4999; duracion = 2; }
+        // else if (programa === "carrera") { precioMensual = 3999; duracion = 6; }
+        // else if (programa === "master") { precioMensual = 2999; duracion = 12; }
 
-        let descuento = 0;
-        if (beca === "facebook") descuento = 0.20;
-        else if (beca === "google") descuento = 0.15;
-        else if (beca === "jesua") descuento = 0.50;
+        // let descuento = 0;
+        // if (beca === "facebook") descuento = 0.20;
+        // else if (beca === "google") descuento = 0.15;
+        // else if (beca === "jesua") descuento = 0.50;
 
-        const precioConDescuento = precioMensual * (1 - descuento);
-        const total = precioConDescuento * duracion;
+        // const precioConDescuento = precioMensual * (1 - descuento);
+        // const total = precioConDescuento * duracion;
 
-        console.log("Programa: ", programa , "- Beca: ", beca, " - Duracion: ", duracion, " meses");
-        console.log('Precio mensual: $${precioConDescuento} MXN');
-        console.log('Total por el curso: $${total} MXN');
+        // console.log("Programa: ", programa , "- Beca: ", beca, " - Duracion: ", duracion, " meses");
+        // console.log('Precio mensual: $${precioConDescuento} MXN');
+        // console.log('Total por el curso: $${total} MXN');
 
         //==========================================================================//
 
+        // 12. Realizar un programa que ayude a calcular el total a pagar de acuerdo a la
+        //  distancia recorrida por un vehículo con cargo extra por los litros consumidos,
+        //  tomando en consideración lo siguiente:
+        // Si el vehículo es “coche”, el precio kilometro ha de ser 0.20, si es “moto” ha
+        //  de ser 0.10 y si es “autobús” 0.5.
+        // Si los litros consumidos están entre 0 y 100 se ha de añadir 5 al costo total,
+        //  si es mayor la cantidad de litros consumidos se ha de añadir 10 al total.
+        // Considere qué: total a pagar = (precio kilometro x kms recorridos) + extra por
+        //  litros consumidos.
+
+        //Respuesta:
+        const tipo = prompt("Tipo de vehículo (coche, moto, autobus):").toLowerCase();
+        const kms = parseFloat(prompt("Ingrese los kms recorridos:"));
+        const litros = parseFloat(prompt("Ingrese los litros consumidos:"));
+
+        let precioKm = 0;
+        if (tipo === "coche") precioKm = 0.20;
+        else if (tipo === "moto") precioKm = 0.10;
+        else if (tipo === "autobus") precioKm = 0.50;
+
+        let extra = (litros <= 100) ? 5 : 10;
+        const totalPagar = (precioKm * kms) + extra;
+        console.log("Vehículo: ", tipo, "- Kms recorridos: ", kms, " - Litros consumidos: ", litros);
+        console.log(`Total a pagar: $${totalPagar.toFixed(2)}`);
+
+        //==========================================================================//
 
     </script>
 </body>
