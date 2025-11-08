@@ -126,28 +126,60 @@
         // Salida:
         // ArregloNuevo: [4, 10, 4, 2, 10, 6]
 
-        // Respuesta:
-        // Pedir los dos arreglos al usuario
-        let entrada01 = prompt("Ingresa Arreglo1 separado por comas:");
-        let arreglo01 = entrada01.split(",").map(Number);
+        // // Respuesta:
+        // // Pedir los dos arreglos al usuario
+        // let entrada01 = prompt("Ingresa Arreglo1 separado por comas:");
+        // let arreglo01 = entrada01.split(",").map(Number);
 
-        let entrada02 = prompt("Ingresa Arreglo2 separado por comas:");
-        let arreglo02 = entrada02.split(",").map(Number);
+        // let entrada02 = prompt("Ingresa Arreglo2 separado por comas:");
+        // let arreglo02 = entrada02.split(",").map(Number);
 
-        // Multiplicar cada elemento por 2
-        let doble1 = arreglo01.map(num => num * 2);
-        let doble2 = arreglo02.map(num => num * 2);
+        // // Multiplicar cada elemento por 2
+        // let doble1 = arreglo01.map(num => num * 2);
+        // let doble2 = arreglo02.map(num => num * 2);
 
-        // Unir ambos resultados
-        let nuevoArreglo = doble1.concat(doble2);
+        // // Unir ambos resultados
+        // let nuevoArreglo = doble1.concat(doble2);
 
-        // Mostrar resultados
-        console.log("Arreglo1:", arreglo01);
-        console.log("Arreglo2:", arreglo02);
-        console.log("Arreglo nuevo:", nuevoArreglo);
+        // // Mostrar resultados
+        // console.log("Arreglo1:", arreglo01);
+        // console.log("Arreglo2:", arreglo02);
+        // console.log("Arreglo nuevo:", nuevoArreglo);
 
         //==========================================================================//
 
+        // 6. Crea un programa que solicite al usuario 2 números entre 1 y 50.
+        // Posteriormente mostrar en consola los números del 1 hasta al 50,
+        // pero añadir el mensaje “¡Lotería!” solo al mostrar los números
+        // indicados por el usuario.
+        // Ejm:
+        // Primer número: 2
+        // Segundo número: 5
+        // Salida de muestra:
+        // 1
+        // Lotería!
+        // 3
+        // 4
+        // Lotería!
+        // 6
+        // .
+        // .
+        // .
+        // 50
+
+        //Respuesta:
+        const num1 = parseInt(prompt("Ingresa el primer número (1-50):"));
+        const num2 = parseInt(prompt("Ingresa el segundo número (1-50):"));
+
+        for (let i = 1; i <= 50; i++) {
+            if (i === num1 || i === num2) {
+                console.log("¡Lotería!");
+            } else {
+                console.log(i);
+            }
+        }
+
+        //==========================================================================//
 
     </script>
 </body>

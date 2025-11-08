@@ -135,3 +135,36 @@ console.log("Arreglo2:", arreglo02);
 console.log("Arreglo nuevo:", nuevoArreglo);
 
 //==========================================================================//
+
+// 6. Crea un programa que solicite al usuario 2 números entre 1 y 50.
+// Posteriormente mostrar en consola los números del 1 hasta al 50,
+// pero añadir el mensaje “¡Lotería!” solo al mostrar los números
+// indicados por el usuario.
+// Ejm:
+// Primer número: 2
+// Segundo número: 5
+// Salida de muestra:
+// 1
+// Lotería!
+// 3
+// 4
+// Lotería!
+// 6
+// .
+// .
+// .
+// 50
+
+//Respuesta:
+const num1 = parseInt(prompt("Ingresa el primer número (1-50):"));
+const num2 = parseInt(prompt("Ingresa el segundo número (1-50):"));
+
+for (let i = 1; i <= 50; i++) {
+    if (i === num1 || i === num2) {
+        console.log("¡Lotería!");
+    } else {
+        console.log(i);
+    }
+}
+
+//==========================================================================//
