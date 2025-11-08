@@ -18,18 +18,18 @@
         // Salida:
         // Promedio: 4.25
 
-        // // Respuesta:
-        // let entradaA = prompt("Ingrese los números separados por comas:");
-        // let partesA = entradaA.split(",");
-        // let suma = 0;
+        // Respuesta:
+        let entradaA = prompt("Ingrese los números separados por comas:");
+        let partesA = entradaA.split(",");
+        let suma = 0;
 
-        // for (let i = 0; i < partesA.length; i++) {
-        //     suma = suma + Number(partesA[i]);
-        // }
+        for (let i = 0; i < partesA.length; i++) {
+            suma = suma + Number(partesA[i]);
+        }
 
-        // let promedio = suma / partesA.length;
-        // console.log("Arreglo: {" + entradaA + "}")
-        // console.log("Promedio:", promedio);
+        let promedio = suma / partesA.length;
+        console.log("Arreglo: {" + entradaA + "}")
+        console.log("Promedio:", promedio);
 
         //==========================================================================//
 
@@ -343,20 +343,20 @@
         // Considere qué: total a pagar = (precio kilometro x kms recorridos) + extra por
         //  litros consumidos.
 
-        //Respuesta:
-        const tipo = prompt("Tipo de vehículo (coche, moto, autobus):").toLowerCase();
-        const kms = parseFloat(prompt("Ingrese los kms recorridos:"));
-        const litros = parseFloat(prompt("Ingrese los litros consumidos:"));
+        // // Respuesta:
+        // const tipo = prompt("Tipo de vehículo (coche, moto, autobus):").toLowerCase();
+        // const kms = parseFloat(prompt("Ingrese los kms recorridos:"));
+        // const litros = parseFloat(prompt("Ingrese los litros consumidos:"));
 
-        let precioKm = 0;
-        if (tipo === "coche") precioKm = 0.20;
-        else if (tipo === "moto") precioKm = 0.10;
-        else if (tipo === "autobus") precioKm = 0.50;
+        // let precioKm = 0;
+        // if (tipo === "coche") precioKm = 0.20;
+        // else if (tipo === "moto") precioKm = 0.10;
+        // else if (tipo === "autobus") precioKm = 0.50;
 
-        let extra = (litros <= 100) ? 5 : 10;
-        const totalPagar = (precioKm * kms) + extra;
-        console.log("Vehículo: ", tipo, "- Kms recorridos: ", kms, " - Litros consumidos: ", litros);
-        console.log(`Total a pagar: $${totalPagar.toFixed(2)}`);
+        // let extra = (litros <= 100) ? 5 : 10;
+        // const totalPagar = (precioKm * kms) + extra;
+        // console.log("Vehículo: ", tipo, "- Kms recorridos: ", kms, " - Litros consumidos: ", litros);
+        // console.log(`Total a pagar: $${totalPagar.toFixed(2)}`);
 
         //==========================================================================//
 

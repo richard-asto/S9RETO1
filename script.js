@@ -331,7 +331,7 @@ console.log('Total por el curso: $${total} MXN');
 // Considere qué: total a pagar = (precio kilometro x kms recorridos) + extra por
 //  litros consumidos.
 
-//Respuesta:
+// Respuesta:
 const tipo = prompt("Tipo de vehículo (coche, moto, autobus):").toLowerCase();
 const kms = parseFloat(prompt("Ingrese los kms recorridos:"));
 const litros = parseFloat(prompt("Ingrese los litros consumidos:"));
