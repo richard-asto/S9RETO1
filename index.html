@@ -220,15 +220,15 @@
         // calificación es inferior a 6, “regular” si está entre 6 y 8, “bien” si
         // es 9, y por último, “excelente” si es 10.
 
-        //Respuesta:
-        const nota = parseInt(prompt("Ingrese una calificación (1-10):"));
-        console.log("Nota: " + nota)
-        if (nota < 1 || nota > 10) {
-            console.log("Error: la calificación debe estar entre 1 y 10");
-        } else if (nota < 6) console.log("Reprobado");
-        else if (nota <= 8) console.log("Regular");
-        else if (nota === 9) console.log("Bien");
-        else console.log("Excelente");
+        // //Respuesta:
+        // const nota = parseInt(prompt("Ingrese una calificación (1-10):"));
+        // console.log("Nota: " + nota)
+        // if (nota < 1 || nota > 10) {
+        //     console.log("Error: la calificación debe estar entre 1 y 10");
+        // } else if (nota < 6) console.log("Reprobado");
+        // else if (nota <= 8) console.log("Regular");
+        // else if (nota === 9) console.log("Bien");
+        // else console.log("Excelente");
 
         //==========================================================================//
 
@@ -250,23 +250,45 @@
         // La rueda es para un vehículo mediano.
         // Su grosor es inferior al recomendado.
 
-        // Respuesta:
-        const diametro = parseFloat(prompt("Ingrese el diámetro de la rueda:"));
-        const grosor = parseFloat(prompt("Ingrese el grosor de la rueda:"));
-        console.log("Diámetro de la rueda: " + diametro + " - Grosor de la rueda: " + grosor);
+        // // Respuesta:
+        // const diametro = parseFloat(prompt("Ingrese el diámetro de la rueda:"));
+        // const grosor = parseFloat(prompt("Ingrese el grosor de la rueda:"));
+        // console.log("Diámetro de la rueda: " + diametro + " - Grosor de la rueda: " + grosor);
 
-        if (diametro > 1.4) {
-            console.log("La rueda es para un vehículo grande.");
-            if (grosor < 0.4) console.log("El grosor para esta rueda es inferior al recomendado.");
-        } else if (diametro > 0.8) {
-            console.log("La rueda es para un vehículo mediano.");
-            if (grosor < 0.25) console.log("El grosor para esta rueda es inferior al recomendado.");
-        } else {
-            console.log("La rueda es para un vehículo pequeño.");
-        }
+        // if (diametro > 1.4) {
+        //     console.log("La rueda es para un vehículo grande.");
+        //     if (grosor < 0.4) console.log("El grosor para esta rueda es inferior al recomendado.");
+        // } else if (diametro > 0.8) {
+        //     console.log("La rueda es para un vehículo mediano.");
+        //     if (grosor < 0.25) console.log("El grosor para esta rueda es inferior al recomendado.");
+        // } else {
+        //     console.log("La rueda es para un vehículo pequeño.");
+        // }
 
         //==========================================================================//
 
+        // 10. Escribe un programa que responda a un usuario que quiere comprar un helado
+        //  en una conocida marca de comida rápida cuánto le costará en función del topping que elija.
+        // • El helado sin topping cuesta 50 MXN.
+        // • El topping de oreo cuesta 10 MXN.
+        // • El topping de KitKat cuesta 15 MXN.
+        // • El topping de brownie cuesta 20 MXN.
+        // En caso de no disponer del topping solicitado por el usuario, el programa le indicará “no tenemos este topping, lo sentimos.” y a continuación le informará el precio del helado sin ningún topping.
+
+        //Respuesta:
+        const topping = prompt("Elige un topping (oreo, kitkat, brownie):").toLowerCase();
+        let precio = 50;
+
+        if (topping === "oreo") precio += 10;
+        else if (topping === "kitkat") precio += 15;
+        else if (topping === "brownie") precio += 20;
+        else {
+            console.log("No tenemos este topping, lo sentimos.");
+        }
+        console.log("helado con ", topping)
+        console.log("El precio final es:", precio, "MXN");
+
+        //==========================================================================//
 
     </script>
 </body>
