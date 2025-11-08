@@ -74,3 +74,30 @@ library.forEach(function (book) {
 });
 
 //==========================================================================//
+
+// 4. Crear un programa que tome dos arreglos de números y que retorne un
+// booleano, unir los dos arreglos en uno solo, si la longitud del nuevo
+// arreglo es mayor o igual a 10 que retorne true si es menor a 10 que
+// retorne false.
+// Ejm:
+// Entrada:
+// Arreglo1: [2, 5, 2, 3, 7, 2]
+// Arreglo2: [1, 5, 3, 3]
+// Salida:
+// ArregloNuevo: [2, 5, 2, 3, 7, 2, 1, 5, 3, 3]
+// True
+
+//Respuesta:
+let entrada1 = prompt("Ingresa Arreglo1 separado por comas:");
+let arreglo1 = entrada1.split(",").map(Number);
+
+let entrada2 = prompt("Ingresa Arreglo2 separado por comas:");
+let arreglo2 = entrada2.split(",").map(Number);
+
+let arregloNuevo = arreglo1.concat(arreglo2);
+console.log("Arreglo1:", arreglo1);
+console.log("Arreglo2:", arreglo2);
+console.log("Arreglo nuevo:", arregloNuevo);
+
+let resultado = arregloNuevo.length >= 10;
+console.log(resultado);
