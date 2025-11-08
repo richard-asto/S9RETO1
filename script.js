@@ -101,3 +101,37 @@ console.log("Arreglo nuevo:", arregloNuevo);
 
 let resultado = arregloNuevo.length >= 10;
 console.log(resultado);
+
+//==========================================================================//
+
+// 5. Crear una función con el nombre de funcionArray() que tome dos arreglos
+//  de números enteros como parámetro y retornar un único arreglo, cada elemento
+//  del arreglo debe estar multiplicado por dos.
+// Ejm:
+// Entrada:
+// Arreglo1: [2, 5, 2]
+// Arreglo2: [1, 5, 3]
+// Salida:
+// ArregloNuevo: [4, 10, 4, 2, 10, 6]
+
+// Respuesta:
+// Pedir los dos arreglos al usuario
+let entrada01 = prompt("Ingresa Arreglo1 separado por comas:");
+let arreglo01 = entrada01.split(",").map(Number);
+
+let entrada02 = prompt("Ingresa Arreglo2 separado por comas:");
+let arreglo02 = entrada02.split(",").map(Number);
+
+// Multiplicar cada elemento por 2
+let doble1 = arreglo01.map(num => num * 2);
+let doble2 = arreglo02.map(num => num * 2);
+
+// Unir ambos resultados
+let nuevoArreglo = doble1.concat(doble2);
+
+// Mostrar resultados
+console.log("Arreglo1:", arreglo01);
+console.log("Arreglo2:", arreglo02);
+console.log("Arreglo nuevo:", nuevoArreglo);
+
+//==========================================================================//
