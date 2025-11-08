@@ -20,3 +20,24 @@ console.log("Arreglo: {" + entradaA + "}")
 console.log("Promedio:", promedio);
 
 //==========================================================================//
+
+// 2. De un arreglo de números, retornar la suma de todos los números pares.
+// Ejm:
+// Entrada: [1, 2, 5, 8, 9, 12, 2, 3]
+// Salida: 2+8+12+2 = 24
+
+//Respuesta:
+let entradaB = prompt("Ingrese los números separados por comas:");
+let partesB = entradaB.split(",");
+let sumaPares = 0;
+
+for (let i = 0; i < partesB.length; i++) {
+    let num = Number(partesB[i]);
+    if (num % 2 === 0) {
+        sumaPares = sumaPares + num;
+    }
+}
+console.log("Arreglo: {" + entradaB + "}")
+console.log("Suma de números pares:", sumaPares);
+
+//==========================================================================//
