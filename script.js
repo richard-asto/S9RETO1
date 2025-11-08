@@ -277,3 +277,46 @@ console.log("helado con ", topping)
 console.log("El precio final es:", precio, "MXN");
 
 //==========================================================================//
+
+// 11. Un conocido portal de educación en tecnología está ofreciendo programas para
+//  aprender a desarrollar aplicaciones. Escribe un programa que le indique a la
+//  persona interesada cuánto deberá pagar mensualmente de acuerdo a la opción elegida.
+// El programa educativo contempla 3 diferentes niveles, cada uno con su costo mensual:
+// • Course: $4999 MXN
+// • Carrera $3999 MXN
+// • Master: $2999 MXN
+// Adicionalmente preguntar si cuenta con alguna beca y aplicar el descuento
+//  correspondiente al precio final.
+// • Beca Facebook: 20% de descuento.
+// • Beca Google: 15% de descuento.
+// • Beca Jesua: 50% de descuento.
+// Finalmente, además del precio mensual con descuento, indicar al usuario cuánto
+//  gastaría en total por el curso elegido, tomando en cuenta las siguientes duraciones:
+// • Course: 2 meses
+// • Carrera 6 meses
+// • Master: 12 meses
+
+//Respuesta:
+const programa = prompt("Elige un programa (course, carrera, master):").toLowerCase();
+const beca = prompt("¿Tienes alguna beca? (facebook, google, jesua o ninguna):").toLowerCase();
+
+let precioMensual = 0;
+let duracion = 0;
+
+if (programa === "course") { precioMensual = 4999; duracion = 2; }
+else if (programa === "carrera") { precioMensual = 3999; duracion = 6; }
+else if (programa === "master") { precioMensual = 2999; duracion = 12; }
+
+let descuento = 0;
+if (beca === "facebook") descuento = 0.20;
+else if (beca === "google") descuento = 0.15;
+else if (beca === "jesua") descuento = 0.50;
+
+const precioConDescuento = precioMensual * (1 - descuento);
+const total = precioConDescuento * duracion;
+
+console.log("Programa: ", programa, " - Beca: ", beca, " - Duracion: ", duracion, " meses");
+console.log('Precio mensual: $${precioConDescuento} MXN');
+console.log('Total por el curso: $${total} MXN');
+
+//==========================================================================//
